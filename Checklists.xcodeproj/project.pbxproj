@@ -15,6 +15,7 @@
 		1B20326D1B9F2D96006A7D8D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B20326B1B9F2D96006A7D8D /* LaunchScreen.xib */; };
 		1B2032791B9F2D96006A7D8D /* ChecklistsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2032781B9F2D96006A7D8D /* ChecklistsTests.m */; };
 		1B4DFF761BD7DE5A006E4E8E /* ChecklistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4DFF751BD7DE5A006E4E8E /* ChecklistItem.m */; };
+		1BDD085A1BF238BB00688561 /* AddItemViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BDD08591BF238BB00688561 /* AddItemViewControllerTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		1B2032781B9F2D96006A7D8D /* ChecklistsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChecklistsTests.m; sourceTree = "<group>"; };
 		1B4DFF741BD7DE5A006E4E8E /* ChecklistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistItem.h; sourceTree = "<group>"; };
 		1B4DFF751BD7DE5A006E4E8E /* ChecklistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistItem.m; sourceTree = "<group>"; };
+		1BDD08581BF238BB00688561 /* AddItemViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemViewControllerTableViewController.h; sourceTree = "<group>"; };
+		1BDD08591BF238BB00688561 /* AddItemViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemViewControllerTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				1B2032611B9F2D96006A7D8D /* AppDelegate.m */,
 				1B2032631B9F2D96006A7D8D /* ViewController.h */,
 				1B2032641B9F2D96006A7D8D /* ViewController.m */,
+				1BDD08581BF238BB00688561 /* AddItemViewControllerTableViewController.h */,
+				1BDD08591BF238BB00688561 /* AddItemViewControllerTableViewController.m */,
 				1B2032661B9F2D96006A7D8D /* Main.storyboard */,
 				1B2032691B9F2D96006A7D8D /* Images.xcassets */,
 				1B20326B1B9F2D96006A7D8D /* LaunchScreen.xib */,
@@ -227,6 +232,7 @@
 				1B2032651B9F2D96006A7D8D /* ViewController.m in Sources */,
 				1B2032621B9F2D96006A7D8D /* AppDelegate.m in Sources */,
 				1B20325F1B9F2D96006A7D8D /* main.m in Sources */,
+				1BDD085A1BF238BB00688561 /* AddItemViewControllerTableViewController.m in Sources */,
 				1B4DFF761BD7DE5A006E4E8E /* ChecklistItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
