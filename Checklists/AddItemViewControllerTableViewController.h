@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddItemViewControllerTableViewController : UITableViewController
+@interface AddItemViewControllerTableViewController : UITableViewController<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @end

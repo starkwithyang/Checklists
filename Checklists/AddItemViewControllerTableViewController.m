@@ -31,6 +31,7 @@
     
 }
 - (IBAction)Done:(id)sender {
+    NSLog(@"当前文本框所输入的内容是:%@",_textField.text);
    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil]; 
     
     
@@ -38,6 +39,11 @@
 -(NSIndexPath*)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return nil;//我将要选中某一行了
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.textField becomeFirstResponder];
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
