@@ -88,14 +88,15 @@
                                 <action selector="cancel:" destination="ecK-Pw-iu3" id="dYs-Fl-XNt"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="bnZ-PX-Day">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="done" id="NGW-Wx-lXv">
                             <connections>
-                                <action selector="Done:" destination="ecK-Pw-iu3" id="v8V-fv-7JK"/>
+                                <action selector="Done:" destination="ecK-Pw-iu3" id="Ywe-Mq-ena"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="doneBarButton" destination="NGW-Wx-lXv" id="f4C-3u-eLk"/>
                         <outlet property="textField" destination="DxE-x4-KZj" id="8Yc-tC-lGx"/>
                     </connections>
                 </tableViewController>

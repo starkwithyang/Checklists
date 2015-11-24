@@ -45,6 +45,17 @@
     [self.textField becomeFirstResponder];
     
 }
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    NSString *newText =[textField.text stringByReplacingCharactersInRange:range withString:string];
+    if ([newText length]>0) {
+        self.doneBarButton.enabled =YES;
+    }else{
+        self.doneBarButton.enabled =NO;
+    }
+    
+    return YES;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
