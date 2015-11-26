@@ -48,12 +48,13 @@
 
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     NSString *newText =[textField.text stringByReplacingCharactersInRange:range withString:string];
-    if ([newText length]>0) {
+   /* if ([newText length]>0) {
         self.doneBarButton.enabled =YES;
     }else{
         self.doneBarButton.enabled =NO;
-    }
-    
+    }*/
+    self.doneBarButton.enabled =([newText length]>0);
+    //编辑启动状态 赋值给newText length>0
     return YES;
 }
 - (void)didReceiveMemoryWarning {
