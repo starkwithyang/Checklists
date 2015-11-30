@@ -10,7 +10,7 @@
 #import "AddItemViewControllerTableViewController.h"
 
 @interface ViewController : UITableViewController<AddItemViewControllerTableViewControllerDelegate>
-- (IBAction)addItem:(id)sender;
+
 
 
 @end
