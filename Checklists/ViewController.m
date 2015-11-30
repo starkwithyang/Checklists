@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ChecklistItem.h"//现在我们需要用到这个对象
+#import "AddItemViewControllerTableViewController.h"
 @interface ViewController ()
 
 
@@ -116,6 +117,35 @@
     NSArray*indexPaths =@[indexPath];
     [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
     
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"AddItem"])
+    {
+        UINavigationController *navigationController =segue.destinationViewController;
+        AddItemViewControllerTableViewController *controller= (AddItemViewControllerTableViewController*)navigationController.topViewController;
+        controller.delegate =self;
+        
+        
+    }
+}
+-(void)addItemViewControllerTableViewControllerDidCancel:(AddItemViewControllerTableViewController *)controller{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+-(void)addItemViewController:(AddItemViewControllerTableViewController *)controller didFinishAddingItem:(ChecklistItem *)item{
+    
+    NSInteger newRowIndex =[_items count];
+    [_items addObject:item];
+    
+    NSIndexPath*indexPath =[NSIndexPath indexPathForRow:newRowIndex inSection:0];
+    
+    NSArray *indexPaths =@[indexPath];
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    
+    
+    
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

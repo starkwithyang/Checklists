@@ -36,7 +36,7 @@
                     <navigationItem key="navigationItem" title="Checklists" id="Rgk-Dr-w2a">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gs0-UZ-Vhu">
                             <connections>
-                                <segue destination="wlZ-Hn-Sqq" kind="modal" id="lqX-ew-UvB"/>
+                                <segue destination="wlZ-Hn-Sqq" kind="modal" identifier="AddItem" id="lqX-ew-UvB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -7,7 +7,7 @@
 //
 
 #import "AddItemViewControllerTableViewController.h"
-
+#import "ChecklistItem.h"
 @interface AddItemViewControllerTableViewController ()
 
 
@@ -26,14 +26,17 @@
 }
 - (IBAction)cancel:(id)sender {
     
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-    
+   // [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    [self.delegate addItemViewControllerTableViewControllerDidCancel:self];
     
 }
 - (IBAction)Done:(id)sender {
-    NSLog(@"当前文本框所输入的内容是:%@",_textField.text);
-   [self.presentingViewController dismissViewControllerAnimated:YES completion:nil]; 
-    
+   // NSLog(@"当前文本框所输入的内容是:%@",_textField.text);
+   //[self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    ChecklistItem *item =[[ChecklistItem alloc]init];
+    item.text =self.textField.text;
+    item.checked =NO;
+    [self.delegate addItemViewController:self didFinishAddingItem:item];
     
 }
 -(NSIndexPath*)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
