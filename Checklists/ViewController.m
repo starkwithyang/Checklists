@@ -117,11 +117,16 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"AddItem"])
     {
-        UINavigationController *navigationController =segue.destinationViewController;
-        AddItemViewControllerTableViewController *controller= (AddItemViewControllerTableViewController*)navigationController.topViewController;
+        UINavigationController *navigationController =segue.destinationViewController;//navigationController是segue要跳转的目标
+        AddItemViewControllerTableViewController *controller= (AddItemViewControllerTableViewController*)navigationController.topViewController;//添加是navigationController首页展示地
+        controller.delegate =self;
+    }else if([segue.identifier isEqualToString:@"EditItem"]){
+        UINavigationController *navigationController =segue.destinationViewController;//navigationController是segue要跳转的目标
+        AddItemViewControllerTableViewController *controller= (AddItemViewControllerTableViewController*)navigationController.topViewController;//添加是navigationController首页展示地
         controller.delegate =self;
         
-        
+        NSIndexPath *indexPath =[self.tableView indexPathForCell:sender];//触发了segue的细节展示按钮，可以获取到当前显示的Cell对应行
+        controller.itemToEdit =_items[indexPath.row];//????
     }
 }
 -(void)addItemViewControllerTableViewControllerDidCancel:(AddItemViewControllerTableViewController *)controller{

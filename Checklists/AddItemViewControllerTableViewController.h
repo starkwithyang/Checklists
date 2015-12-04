@@ -22,5 +22,6 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneBarButton;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property(nonatomic,weak)id<AddItemViewControllerTableViewControllerDelegate>delegate;
+@property(nonatomic,strong)ChecklistItem*itemToEdit;
 
 @end
